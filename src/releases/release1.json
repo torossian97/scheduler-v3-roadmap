@@ -1,0 +1,66 @@
+{
+  "config": {
+    "appearance": {
+      "color": false,
+      "company_name": false,
+      "logo": false,
+      "privacy_policy_redirect": false,
+      "show_autoschedule": false,
+      "show_nylas_branding": false,
+      "show_timezone_options": true,
+      "show_week_view": false,
+      "submit_text": false,
+      "thank_you_redirect": false,
+      "thank_you_text": false,
+      "thank_you_text_secondary": false
+    },
+    "booking": {
+      "additional_fields": false,
+      "additional_guests_hidden": false,
+      "available_days_in_future": true,
+      "calendar_invite_to_guests": false,
+      "cancellation_policy": false,
+      "confirmation_emails_to_guests": false,
+      "confirmation_emails_to_host": false,
+      "confirmation_method": {
+        "automatic": true,
+        "manual": false,
+        "external": true
+      },
+      "interval_minutes": true,
+      "min_booking_notice": false,
+      "min_cancellation_notice": true,
+      "min_buffer": true,
+      "name_field_hidden": false,
+      "scheduling_method": {
+        "round-robin-maximize-fairness": false,
+        "round-robin-maximize-availability": false
+      }
+    },
+    "event": {
+      "capacity": true,
+      "duration": true,
+      "location": true,
+      "title": true,
+      "template_title": true,
+      "participants": true
+    },
+    "expire_after": {
+      "date": false,
+      "uses": false
+    },
+    "disable_emails": true,
+    "features": {
+      "change_name_url_parameter": false,
+      "collective_meetings": false,
+      "group_meetings": false
+    },
+    "locale": false,
+    "locale_for_guests": false,
+    "reminders": {
+      "email": false,
+      "webhooks": false
+    },
+    "timezone": true
+  }
+}
