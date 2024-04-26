@@ -80,11 +80,11 @@ const releaseColors = [
 
 const releaseAliases = {
   release1: "Early Access",
-  release2: "Release 2", // Specify each according to your naming scheme
-  release3: "Release 3",
-  release4: "Release 4",
-  release5: "Release 5",
-  release6: "GA Release",
+  release2: "end of May", // Specify each according to your naming scheme
+  release3: "early june",
+  release4: "mid june",
+  release5: "end of june",
+  release6: "July 30 (GA)",
   release7: "Post-GA",
 };
 
@@ -281,7 +281,7 @@ const App = () => {
             {earliestMigrationRelease
               ? `Your projected migration date is ${
                   releaseDates["release" + earliestMigrationRelease]
-                } 🥳`
+                }`
               : "Select features to see migration release"}
           </Typography>
         </Toolbar>
@@ -310,7 +310,7 @@ const App = () => {
       </Typography>
       {/* this will be for info etc.*/}
       {Object.entries(featureList)
-        .sort(([a], [b]) => a.localeCompare(b))
+        .sort(([a], [b]) => a.localeCompare(b)) // Sorting sections alphabetically
         .map(([parent, features]) => (
           <Box key={parent} width="50%" paddingTop="20px">
             <Typography variant="h5" gutterBottom component="div">
@@ -325,48 +325,63 @@ const App = () => {
               {sectionMappings[parent]["description"]}
             </Typography>
             <Stack spacing={1} width="100%">
-              {features.map(
-                ({
-                  key,
-                  name,
-                  enabled,
-                  available,
-                  description,
-                  earliestRelease,
-                }) => (
-                  <StyledCard key={key} variant="outlined">
-                    <StyledCardContent>
-                      <FeatureNameContainer>
-                        <FormControlLabel
-                          control={
-                            <Checkbox
-                              checked={enabled}
-                              onChange={() => handleFeatureChange(key, parent)}
-                              //disabled={!available}
-                            />
+              {features
+                .sort((a, b) => a.earliestRelease - b.earliestRelease) // Sorting features by release within each section
+                .map(
+                  ({
+                    key,
+                    name,
+                    enabled,
+                    available,
+                    description,
+                    earliestRelease,
+                  }) => (
+                    <StyledCard key={key} variant="outlined">
+                      <StyledCardContent>
+                        <FeatureNameContainer>
+                          <FormControlLabel
+                            control={
+                              <Checkbox
+                                checked={enabled}
+                                disabled={available}
+                                onChange={() =>
+                                  handleFeatureChange(key, parent)
+                                }
+                                // Consider enabling/disabling based on 'available'
+                              />
+                            }
+                            label="" // No label here, name is displayed below
+                          />
+                          <FeatureDetails>{name}</FeatureDetails>
+                          {description && (
+                            <IconButton
+                              onClick={() =>
+                                handleOpenDialog(name, description)
+                              }
+                              size="small"
+                            >
+                              <InfoIcon />
+                            </IconButton>
+                          )}
+                        </FeatureNameContainer>
+                        <Chip
+                          label={
+                            releaseAliases[`release${earliestRelease}`] ||
+                            `Release ${earliestRelease}`
                           }
-                          label=""
-                        />
-                        <FeatureDetails>{name}</FeatureDetails>
-                        <IconButton
-                          onClick={() => handleOpenDialog(name, description)}
                           size="small"
-                        >
-                          <InfoIcon />
-                        </IconButton>
-                      </FeatureNameContainer>
-                      <Chip
-                        label={releaseAliases[`release${earliestRelease}`]}
-                        size="small"
-                        color={releaseColors[earliestRelease - 1]}
-                      />
-                    </StyledCardContent>
-                  </StyledCard>
-                )
-              )}
+                          color={
+                            releaseColors[earliestRelease - 1] || "default"
+                          } // Handling case where there's no specific color
+                        />
+                      </StyledCardContent>
+                    </StyledCard>
+                  )
+                )}
             </Stack>
           </Box>
         ))}
+
       <Dialog open={openDialog} onClose={handleCloseDialog}>
         <DialogTitle>{dialogContent.title}</DialogTitle>
         <DialogContent>

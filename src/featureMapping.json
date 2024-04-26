@@ -1,7 +1,7 @@
 {
   "appearance.color": {
     "name": "Change Page Colors",
-    "description": "Allows customization of the primary color scheme of the Scheduling page."
+    "description": ""
   },
   "appearance.company_name": {
     "name": "Company Name Display",
@@ -13,19 +13,19 @@
   },
   "appearance.privacy_policy_redirect": {
     "name": "Privacy Policy Redirect",
-    "description": "Enables a redirect to a privacy policy page."
+    "description": "Enables a redirect to a privacy policy page on the Scheduling component."
   },
   "appearance.show_autoschedule": {
     "name": "Auto-Schedule Option",
-    "description": "Provides an option for automatic scheduling within the application."
+    "description": "Provides an option for invitees to connect and share their calendar for mutual availability to be shown."
   },
   "appearance.show_nylas_branding": {
-    "name": "Display Nylas Branding",
-    "description": "Controls whether Nylas branding is shown or hidden."
+    "name": "Control over Nylas Branding",
+    "description": ""
   },
   "appearance.show_timezone_options": {
     "name": "Timezone Options",
-    "description": "Allows users to select their timezone for scheduling."
+    "description": ""
   },
   "appearance.show_week_view": {
     "name": "Week View",
@@ -33,47 +33,47 @@
   },
   "appearance.submit_text": {
     "name": "Custom Submit Button Text",
-    "description": "Allows customization of the text displayed on the submit button."
+    "description": ""
   },
   "appearance.thank_you_redirect": {
-    "name": "Thank You Redirect",
-    "description": "Redirects users to a specified URL after submission."
+    "name": "Booking Confirmed (Thank You) Redirect",
+    "description": "Redirects users to a specified URL after submission. This can be done with eventOverrides in our Scheduling component."
   },
   "appearance.thank_you_text": {
     "name": "Custom Thank You Text",
-    "description": "Displays custom text to users after an action is completed."
+    "description": ""
   },
   "appearance.thank_you_text_secondary": {
     "name": "Secondary Thank You Text",
-    "description": "Displays additional thank you text under the primary message."
+    "description": ""
   },
   "booking.additional_fields": {
     "name": "Additional Booking Fields",
-    "description": "Enables extra fields in the booking form."
+    "description": "Enables extra fields in the booking form. Until the Nylas-hosted solution is surfaced, there will be no Editor support - forms are buildable between the Scheduling component's slots."
   },
   "booking.additional_guests_hidden": {
-    "name": "Hide Additional Guests",
-    "description": "Option to hide the additional guests input from users."
+    "name": "Additional Guest Options on Scheduling Page",
+    "description": ""
   },
   "booking.available_days_in_future": {
-    "name": "Days Available for Booking",
-    "description": "Determines how many days into the future bookings can be made."
+    "name": "Days Into the Future Available for Booking",
+    "description": ""
   },
   "booking.calendar_invite_to_guests": {
     "name": "Calendar Invites to Guests",
-    "description": "Automatically sends calendar invites to guests when a booking is made."
+    "description": ""
   },
   "booking.cancellation_policy": {
     "name": "Cancellation Policy",
-    "description": "Defines the cancellation policy for bookings."
+    "description": "This is the cancellation message/policy that organizers can configure from the Editor. It shows up on cancellation flows to end-users."
   },
   "booking.confirmation_emails_to_guests": {
-    "name": "Send Confirmation Emails to Guests",
-    "description": "Enables sending confirmation emails to guests upon booking."
+    "name": "Toggle Sending Confirmation Emails to Guests",
+    "description": ""
   },
   "booking.confirmation_emails_to_host": {
-    "name": "Send Confirmation Emails to Host",
-    "description": "Enables sending confirmation emails to the host upon booking."
+    "name": "Toggle Sending Confirmation Emails to Host",
+    "description": ""
   },
   "booking.confirmation_method.automatic": {
     "name": "Automatic Booking Confirmation",
@@ -81,31 +81,31 @@
   },
   "booking.confirmation_method.manual": {
     "name": "Manual Booking Confirmation",
-    "description": "Bookings require manual confirmation by the host."
+    "description": ""
   },
   "booking.confirmation_method.external": {
     "name": "External Booking Confirmation",
-    "description": "Bookings are confirmed through an external system."
+    "description": ""
   },
   "booking.interval_minutes": {
-    "name": "Interval Between Bookings",
-    "description": "The minimum time interval allowed between bookings."
+    "name": "Interval Length Between Bookings",
+    "description": ""
   },
   "booking.min_booking_notice": {
     "name": "Minimum Booking Notice",
-    "description": "The minimum notice required before a booking can be made."
+    "description": ""
   },
   "booking.min_cancellation_notice": {
     "name": "Minimum Cancellation Notice",
-    "description": "The minimum notice required to cancel a booking."
+    "description": ""
   },
   "booking.min_buffer": {
     "name": "Minimum Buffer Time",
-    "description": "The minimum buffer time required between bookings to prepare for the next appointment."
+    "description": ""
   },
   "booking.name_field_hidden": {
     "name": "Hide Name Field",
-    "description": "Option to hide the name field from booking forms."
+    "description": ""
   },
   "booking.conferencing": {
     "name": "Auto-Conferencing 🆕",
@@ -113,47 +113,47 @@
   },
   "booking.scheduling_method.round-robin-maximize-fairness": {
     "name": "Round-Robin Scheduling (Fairness)",
-    "description": "Distributes bookings evenly to ensure fairness among service providers."
+    "description": ""
   },
   "booking.scheduling_method.round-robin-maximize-availability": {
     "name": "Round-Robin Scheduling (Availability)",
-    "description": "Prioritizes service providers with the most availability."
+    "description": ""
   },
   "event.capacity": {
     "name": "Event Capacity",
-    "description": "Sets the maximum number of participants for an event."
+    "description": ""
   },
   "event.duration": {
     "name": "Event Duration",
-    "description": "Defines the standard duration of events."
+    "description": ""
   },
   "event.location": {
     "name": "Event Location",
-    "description": "Specifies the location where the event will take place."
+    "description": ""
   },
   "event.title": {
     "name": "Event Title",
-    "description": "Allows setting a title for events."
+    "description": ""
   },
   "event.template_title": {
-    "name": "Event Template Title",
-    "description": "Provides a template for automatically generating event titles."
+    "name": "Event Titles (with templating support)",
+    "description": "We refurbished this, giving you more intuitive placeholder to make dynamic titles."
   },
   "event.participants": {
     "name": "Event Participants",
-    "description": "Defines who can participate in an event."
+    "description": ""
   },
   "expire_after.date": {
-    "name": "Expiration Date",
-    "description": "Sets a date after which the event or booking is no longer valid."
+    "name": "Expire at Date",
+    "description": ""
   },
   "expire_after.uses": {
-    "name": "Expiration After Uses",
-    "description": "The event or booking expires after a certain number of uses."
+    "name": "Expire After Uses",
+    "description": ""
   },
   "disable_emails": {
     "name": "Disable Emails",
-    "description": "Disables sending of emails related to the event or booking."
+    "description": ""
   },
   "features.change_name_url_parameter": {
     "name": "Change Name URL Parameter",
@@ -161,30 +161,30 @@
   },
   "features.collective_meetings": {
     "name": "Collective Meetings",
-    "description": "Enables the scheduling of meetings involving multiple parties."
+    "description": ""
   },
   "features.group_meetings": {
     "name": "Group Meetings",
-    "description": "Allows scheduling of meetings for groups."
+    "description": ""
   },
   "locale": {
     "name": "Locale Settings",
-    "description": "Specifies the locale settings for the application."
+    "description": ""
   },
   "locale_for_guests": {
     "name": "Locale for Guests",
-    "description": "Specifies the locale settings specifically for guests."
+    "description": ""
   },
   "reminders.email": {
     "name": "Email Reminders",
-    "description": "Sends email reminders to participants prior to an event."
+    "description": ""
   },
   "reminders.webhooks": {
     "name": "Webhook Reminders",
-    "description": "Sends reminders via webhooks to integrate with other systems."
+    "description": ""
   },
   "timezone": {
     "name": "Timezone Support",
-    "description": "Supports setting different timezones for events and bookings."
+    "description": ""
   }
 }
