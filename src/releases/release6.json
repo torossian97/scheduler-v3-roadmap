@@ -2,13 +2,11 @@
   "config": {
     "appearance": {
       "color": true,
-      "company_name": true,
-      "logo": true,
       "privacy_policy_redirect": true,
-      "show_autoschedule": true,
+      "show_autoschedule": false,
       "show_nylas_branding": true,
       "show_timezone_options": true,
-      "show_week_view": true,
+      "show_week_view": false,
       "submit_text": true,
       "thank_you_redirect": true,
       "thank_you_text": true,
@@ -32,6 +30,7 @@
       "min_cancellation_notice": true,
       "min_buffer": true,
       "name_field_hidden": true,
+      "conferencing": true,
       "scheduling_method": {
         "round-robin-maximize-fairness": true,
         "round-robin-maximize-availability": true
@@ -51,7 +50,6 @@
     },
     "disable_emails": true,
     "features": {
-      "change_name_url_parameter": true,
       "collective_meetings": true,
       "group_meetings": true
     },

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 import {
   Alert,
   AppBar,
@@ -54,7 +55,8 @@ const StyledAppBar = styled(AppBar)({
   padding: "10px 0", // add some vertical padding
 });
 
-const featureMappings = require("./featureMapping.json"); // Adjust the import according to your file structure
+const featureMappings = require("./featureMapping.json");
+const sectionMappings = require("./sectionMapping.json");
 const releases = {
   release1: require("./releases/release1.json"),
   release2: require("./releases/release2.json"),
@@ -62,6 +64,7 @@ const releases = {
   release4: require("./releases/release4.json"),
   release5: require("./releases/release5.json"),
   release6: require("./releases/release6.json"),
+  release7: require("./releases/release7.json"),
   // More releases
 };
 
@@ -72,6 +75,7 @@ const releaseColors = [
   "primary",
   "warning",
   "info",
+  "error",
 ];
 
 const releaseAliases = {
@@ -81,15 +85,17 @@ const releaseAliases = {
   release4: "Release 4",
   release5: "Release 5",
   release6: "GA Release",
+  release7: "Post-GA",
 };
 
 const releaseDates = {
   release1: "May 2, 2024",
-  release2: "End of May, 2024",
-  release3: "Early June, 2024",
-  release4: "Mid June, 2024",
-  release5: "End of June, 2024",
+  release2: "end of May, 2024",
+  release3: "early June, 2024",
+  release4: "mid June, 2024",
+  release5: "end of June, 2024",
   release6: "July 30, 2024",
+  release7: "> August, 2024",
 };
 
 const App = () => {
@@ -97,13 +103,20 @@ const App = () => {
   const [featureList, setFeatureList] = useState({});
   const [openDialog, setOpenDialog] = useState(false);
   const [dialogContent, setDialogContent] = useState({});
-  const [earliestMigrationRelease, setEarliestMigrationRelease] =
-    useState(null);
+  const [earliestMigrationRelease, setEarliestMigrationRelease] = useState(1);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     loadFeatures("release1");
-    console.log("use effect!");
   }, []);
+
+  useEffect(() => {
+    setAnimate(true);
+    const timer = setTimeout(() => {
+      setAnimate(false);
+    }, 1000); // Duration of your animation
+    return () => clearTimeout(timer);
+  }, [earliestMigrationRelease]);
 
   const handleReleaseChange = (releaseKey) => {
     setSelectedRelease(releaseKey);
@@ -191,8 +204,8 @@ const App = () => {
         });
       } else {
         // If the feature doesn't match any defined sections, add it to 'Other'
-        if (!features.Other) features.Other = [];
-        features.Other.push({
+        if (!features.other) features.other = [];
+        features.other.push({
           key,
           name: featureMappings[key] ? featureMappings[key].name : key,
           description: featureMappings[key]
@@ -245,7 +258,6 @@ const App = () => {
     }
     return null;
   }
-
   return (
     <Box display="flex" flexDirection="column" alignItems="center" padding={2}>
       <StyledAppBar position="sticky" top={0}>
@@ -261,9 +273,13 @@ const App = () => {
               />
             ))}
           </Stack>
-          <Typography>
+          <Typography
+            style={{
+              animation: animate ? "flash 0.8s" : "none",
+            }}
+          >
             {earliestMigrationRelease
-              ? `You can migrate on ${
+              ? `Your projected migration date is ${
                   releaseDates["release" + earliestMigrationRelease]
                 } 🥳`
               : "Select features to see migration release"}
@@ -274,19 +290,39 @@ const App = () => {
         Scheduler v3 Interactive Roadmap
       </Typography>
       <Alert severity="warning" style={{ width: "50%" }}>
-        Bear in mind that this roadmap is subject to possible updates. Last
-        update:{" "}
-        <Typography component="span" color="primary" paragraph={true}>
-          April 25, 2024
+        Bear in mind that this roadmap is subject to possible changes. Last
+        updated:{" "}
+        <Typography component="span" color="primary">
+          April 26, 2024
         </Typography>
       </Alert>
+      <Typography
+        width={"50%"}
+        align="left"
+        variant="body1"
+        paddingTop={"20px"}
+      >
+        This roadmap was designed for current v2 customers looking to migrate,
+        outlining what will be released - and when. Select the features you need
+        for your implementation to see when (and in which release) you will be
+        able to migrate. Click a release to automatically see every feature it
+        includes.
+      </Typography>
       {/* this will be for info etc.*/}
       {Object.entries(featureList)
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([parent, features]) => (
           <Box key={parent} width="50%" paddingTop="20px">
-            <Typography variant="h6" gutterBottom component="div">
-              {parent.charAt(0).toUpperCase() + parent.slice(1)}
+            <Typography variant="h5" gutterBottom component="div">
+              {sectionMappings[parent]["name"]}
+            </Typography>
+            <Typography
+              variant="body1"
+              gutterBottom
+              component="div"
+              color={"grey"}
+            >
+              {sectionMappings[parent]["description"]}
             </Typography>
             <Stack spacing={1} width="100%">
               {features.map(
@@ -320,7 +356,7 @@ const App = () => {
                         </IconButton>
                       </FeatureNameContainer>
                       <Chip
-                        label={`Release ${earliestRelease}`}
+                        label={releaseAliases[`release${earliestRelease}`]}
                         size="small"
                         color={releaseColors[earliestRelease - 1]}
                       />

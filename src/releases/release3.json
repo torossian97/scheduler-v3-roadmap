@@ -1,16 +1,14 @@
 {
   "config": {
     "appearance": {
-      "color": false,
-      "company_name": false,
-      "logo": false,
+      "color": true,
       "privacy_policy_redirect": false,
       "show_autoschedule": false,
-      "show_nylas_branding": false,
+      "show_nylas_branding": true,
       "show_timezone_options": true,
       "show_week_view": false,
       "submit_text": false,
-      "thank_you_redirect": false,
+      "thank_you_redirect": true,
       "thank_you_text": false,
       "thank_you_text_secondary": false
     },
@@ -32,6 +30,7 @@
       "min_cancellation_notice": true,
       "min_buffer": true,
       "name_field_hidden": false,
+      "conferencing": false,
       "scheduling_method": {
         "round-robin-maximize-fairness": false,
         "round-robin-maximize-availability": false
@@ -51,7 +50,6 @@
     },
     "disable_emails": true,
     "features": {
-      "change_name_url_parameter": false,
       "collective_meetings": false,
       "group_meetings": false
     },

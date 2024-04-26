@@ -1,7 +1,7 @@
 {
   "appearance.color": {
-    "name": "Custom Color",
-    "description": "Allows customization of the primary color scheme."
+    "name": "Change Page Colors",
+    "description": "Allows customization of the primary color scheme of the Scheduling page."
   },
   "appearance.company_name": {
     "name": "Company Name Display",
@@ -106,6 +106,10 @@
   "booking.name_field_hidden": {
     "name": "Hide Name Field",
     "description": "Option to hide the name field from booking forms."
+  },
+  "booking.conferencing": {
+    "name": "Auto-Conferencing 🆕",
+    "description": "Out-of-the-box conferencing with the same provider you're authenticated with, as well as support for passing cross-provider grants (ie. Zoom, Teams) to enable auto-conferencing to those providers."
   },
   "booking.scheduling_method.round-robin-maximize-fairness": {
     "name": "Round-Robin Scheduling (Fairness)",

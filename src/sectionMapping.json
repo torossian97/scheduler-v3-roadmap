@@ -1,0 +1,30 @@
+{
+  "appearance": {
+    "name": "Page Appearance",
+    "description": "With our new components, most of these features will be available out-the-gate for those opting to self-host. Nylas-hosted implementations similar to v2 will come for GA."
+  },
+  "booking": {
+    "name": "Booking Options",
+    "description": "Booking settings, all available via API, with UI parity support via the Editor Component."
+  },
+  "event": {
+    "name": "Event Options",
+    "description": "Event settings, all available via API, with UI parity support via the Editor Component."
+  },
+  "expire_after": {
+    "name": "Expiry Support",
+    "description": "The ability to make scheduling configurations (pages) that expire after your defined criteria."
+  },
+  "features": {
+    "name": "Special Meeting types",
+    "description": "Special meeting types that are exposed both via the API, and the Editor component."
+  },
+  "reminders": {
+    "name": "Reminders",
+    "description": "Support for email and webhook reminders."
+  },
+  "other": {
+    "name": "Other",
+    "description": "For miscellaneous features."
+  }
+}
