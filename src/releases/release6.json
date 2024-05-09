@@ -31,6 +31,8 @@
       "min_buffer": true,
       "name_field_hidden": true,
       "conferencing": true,
+      "slot_logic": true,
+      "hide_flows": true,
       "scheduling_method": {
         "round-robin-maximize-fairness": true,
         "round-robin-maximize-availability": true
@@ -51,7 +53,7 @@
     "disable_emails": true,
     "features": {
       "collective_meetings": true,
-      "group_meetings": true
+      "group_meetings": false
     },
     "locale": true,
     "locale_for_guests": true,

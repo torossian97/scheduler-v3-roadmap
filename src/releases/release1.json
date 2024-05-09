@@ -8,7 +8,7 @@
       "show_timezone_options": true,
       "show_week_view": false,
       "submit_text": false,
-      "thank_you_redirect": true,
+      "thank_you_redirect": false,
       "thank_you_text": false,
       "thank_you_text_secondary": false
     },
@@ -31,6 +31,8 @@
       "min_buffer": true,
       "name_field_hidden": false,
       "conferencing": false,
+      "slot_logic": false,
+      "hide_flows": false,
       "scheduling_method": {
         "round-robin-maximize-fairness": false,
         "round-robin-maximize-availability": false

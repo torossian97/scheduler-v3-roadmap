@@ -80,20 +80,20 @@ const releaseColors = [
 
 const releaseAliases = {
   release1: "Early Access",
-  release2: "end of May", // Specify each according to your naming scheme
-  release3: "early june",
-  release4: "mid june",
-  release5: "end of june",
+  release2: "Mid May", // Specify each according to your naming scheme
+  release3: "Late May",
+  release4: "Mid June",
+  release5: "Late June",
   release6: "July 30 (GA)",
   release7: "Post-GA",
 };
 
 const releaseDates = {
   release1: "May 2, 2024",
-  release2: "end of May, 2024",
-  release3: "early June, 2024",
+  release2: "mid May, 2024",
+  release3: "late May, 2024",
   release4: "mid June, 2024",
-  release5: "end of June, 2024",
+  release5: "late June, 2024",
   release6: "July 30, 2024",
   release7: "> August, 2024",
 };
@@ -293,7 +293,7 @@ const App = () => {
         Bear in mind that this roadmap is subject to possible changes. Last
         updated:{" "}
         <Typography component="span" color="primary">
-          April 26, 2024
+          May 9, 2024
         </Typography>
       </Alert>
       <Typography
@@ -302,11 +302,29 @@ const App = () => {
         variant="body1"
         paddingTop={"20px"}
       >
-        This roadmap was designed for current v2 customers looking to migrate,
-        outlining what will be released - and when. Select the features you need
-        for your implementation to see when (and in which release) you will be
-        able to migrate. Click a release to automatically see every feature it
-        includes.
+        We designed this tool to help current Nylas v2 Scheduler users
+        understand when v3 Scheduler will have full feature parity, so you can
+        complete migration. Your scheduler implementation is unique, and v3
+        Scheduler will get closer to parity as we build and iterate through the
+        spring and summer. Scheduler v3 might already have everything your
+        project needs. <br />
+        <br />
+        To find out, select all the features your scheduler implementation uses.
+        The page automatically updates with a projected parity date for you
+        based on your project needs and the latest development schedule. You can
+        also click a release at the top of the page to see which features are
+        available by that release, including previously released ones. <br />
+        <br />
+        Keep in mind that you can still{" "}
+        <Typography fontStyle={"italic"} display="inline">
+          start
+        </Typography>{" "}
+        migration before the full parity date; this tool is to confirm the date
+        when{" "}
+        <Typography fontStyle={"italic"} display="inline">
+          all
+        </Typography>{" "}
+        of the features you need will be available.
       </Typography>
       {/* this will be for info etc.*/}
       {Object.entries(featureList)

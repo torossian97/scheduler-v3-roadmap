@@ -31,6 +31,8 @@
       "min_buffer": true,
       "name_field_hidden": true,
       "conferencing": true,
+      "slot_logic": true,
+      "hide_flows": true,
       "scheduling_method": {
         "round-robin-maximize-fairness": true,
         "round-robin-maximize-availability": true

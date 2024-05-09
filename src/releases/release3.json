@@ -8,12 +8,12 @@
       "show_timezone_options": true,
       "show_week_view": false,
       "submit_text": false,
-      "thank_you_redirect": true,
+      "thank_you_redirect": false,
       "thank_you_text": false,
       "thank_you_text_secondary": false
     },
     "booking": {
-      "additional_fields": false,
+      "additional_fields": true,
       "additional_guests_hidden": true,
       "available_days_in_future": true,
       "calendar_invite_to_guests": true,
@@ -30,7 +30,9 @@
       "min_cancellation_notice": true,
       "min_buffer": true,
       "name_field_hidden": false,
-      "conferencing": false,
+      "conferencing": true,
+      "slot_logic": true,
+      "hide_flows": true,
       "scheduling_method": {
         "round-robin-maximize-fairness": false,
         "round-robin-maximize-availability": false

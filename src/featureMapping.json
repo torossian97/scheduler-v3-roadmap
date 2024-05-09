@@ -111,6 +111,14 @@
     "name": "Auto-Conferencing 🆕",
     "description": "Out-of-the-box conferencing with the same provider you're authenticated with, as well as support for passing cross-provider grants (ie. Zoom, Teams) to enable auto-conferencing to those providers."
   },
+  "booking.slot_logic": {
+    "name": "Intuitive time slot logic 🆕",
+    "description": "Out-of-the-box Editor support for setting interval and basic rounding of time slots. Previously, this was only in the API."
+  },
+  "booking.hide_flows": {
+    "name": "Enable / disable cancel or reschedule flows 🆕",
+    "description": "Out-of-the-box Editor and API support to hide both the cancel and reschedule options from appearing in emails or the Scheduling component."
+  },
   "booking.scheduling_method.round-robin-maximize-fairness": {
     "name": "Round-Robin Scheduling (Fairness)",
     "description": ""
@@ -161,11 +169,11 @@
   },
   "features.collective_meetings": {
     "name": "Collective Meetings",
-    "description": ""
+    "description": "Along with API support (available since the Early Access milestone), this will give Developers the ability to pass a list of Nylas-auth'ed users to the Editor; this gives Organizers the ability to select from those users if they wish to consider availability across participants, and add others to their meetings."
   },
   "features.group_meetings": {
     "name": "Group Meetings",
-    "description": ""
+    "description": "We plan to fast-follow after GA to have a superior group meeting experience than in v2. We want to do this right the first time."
   },
   "locale": {
     "name": "Locale Settings",

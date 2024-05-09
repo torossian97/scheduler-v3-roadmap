@@ -8,7 +8,7 @@
       "show_timezone_options": true,
       "show_week_view": false,
       "submit_text": false,
-      "thank_you_redirect": true,
+      "thank_you_redirect": false,
       "thank_you_text": false,
       "thank_you_text_secondary": false
     },
@@ -31,6 +31,8 @@
       "min_buffer": true,
       "name_field_hidden": false,
       "conferencing": true,
+      "slot_logic": true,
+      "hide_flows": true,
       "scheduling_method": {
         "round-robin-maximize-fairness": true,
         "round-robin-maximize-availability": true
@@ -50,7 +52,7 @@
     },
     "disable_emails": true,
     "features": {
-      "collective_meetings": false,
+      "collective_meetings": true,
       "group_meetings": false
     },
     "locale": false,
