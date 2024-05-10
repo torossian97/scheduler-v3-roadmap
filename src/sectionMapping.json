@@ -1,7 +1,7 @@
 {
   "appearance": {
     "name": "Page Appearance",
-    "description": "With our new components, most of these features will be available out-the-gate for those opting to self-host. Nylas-hosted implementations similar to v2 will come for GA."
+    "description": "With the new Scheduler components, most of these features will be available immediately for self-hosted deployments. Nylas-hosted implementations similar to v2 will be availabe in GA."
   },
   "booking": {
     "name": "Booking Options",
