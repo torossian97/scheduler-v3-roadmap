@@ -290,8 +290,8 @@ const App = () => {
         Scheduler v3 Interactive Roadmap
       </Typography>
       <Alert severity="warning" style={{ width: "50%" }}>
-        Bear in mind that this roadmap is subject to possible changes. Last
-        updated:{" "}
+        Scheduler v3 is under active development, and this roadmap is subject to change. <br />
+        Last updated:{" "}
         <Typography component="span" color="primary">
           May 9, 2024
         </Typography>
@@ -302,29 +302,28 @@ const App = () => {
         variant="body1"
         paddingTop={"20px"}
       >
-        We designed this tool to help current Nylas v2 Scheduler users
-        understand when v3 Scheduler will have full feature parity, so you can
-        complete migration. Your scheduler implementation is unique, and v3
-        Scheduler will get closer to parity as we build and iterate through the
-        spring and summer. Scheduler v3 might already have everything your
-        project needs. <br />
+        If you're a current Nylas v2 Scheduler user, this page helps you understand 
+        when v3 Scheduler will have the features you need to complete migration. <br />
         <br />
-        To find out, select all the features your scheduler implementation uses.
-        The page automatically updates with a projected parity date for you
-        based on your project needs and the latest development schedule. You can
-        also click a release at the top of the page to see which features are
-        available by that release, including previously released ones. <br />
+        Select all the features your implementation uses to see a projected date when
+        Scheduler v3 will include all of your selections. Greyed out items are already available.<br />
         <br />
-        Keep in mind that you can still{" "}
+        You can also click a release at the top of the page to see which features will be available 
+        by that release. Scheduler v3 will get closer to full feature parity as we build throughout the spring and summer. <br />
+        <br />
+        Keep in mind that Scheduler v3 might already have everything your project needs. 
+        If it doesn't you can still{" "}
         <Typography fontStyle={"italic"} display="inline">
           start
         </Typography>{" "}
-        migration before the full parity date; this tool is to confirm the date
+        migration at any time before the full parity date. This tool is to confirm the date
         when{" "}
         <Typography fontStyle={"italic"} display="inline">
           all
         </Typography>{" "}
         of the features you need will be available.
+        <br />
+        
       </Typography>
       {/* this will be for info etc.*/}
       {Object.entries(featureList)
