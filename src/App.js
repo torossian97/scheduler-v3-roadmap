@@ -70,7 +70,7 @@ const releases = {
 
 const releaseColors = [
   "default",
-  "secondary",
+  "default", // "secondary",
   "success",
   "primary",
   "warning",
@@ -99,7 +99,7 @@ const releaseDates = {
 };
 
 const App = () => {
-  const [selectedRelease, setSelectedRelease] = useState("release1");
+  const [selectedRelease, setSelectedRelease] = useState("release2");
   const [featureList, setFeatureList] = useState({});
   const [openDialog, setOpenDialog] = useState(false);
   const [dialogContent, setDialogContent] = useState({});
@@ -107,7 +107,7 @@ const App = () => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    loadFeatures("release1");
+    loadFeatures("release2");
   }, []);
 
   useEffect(() => {
@@ -270,6 +270,9 @@ const App = () => {
                 onClick={() => handleReleaseChange(releaseKey)}
                 color={releaseColors[index % releaseColors.length]}
                 variant={selectedRelease === releaseKey ? "filled" : "outlined"}
+                disabled={
+                  releaseColors[index % releaseColors.length] == "default"
+                }
               />
             ))}
           </Stack>
@@ -293,7 +296,7 @@ const App = () => {
         Scheduler v3 is under active development, and this roadmap is subject to change. <br />
         Last updated:{" "}
         <Typography component="span" color="primary">
-          May 9, 2024
+          May 21, 2024
         </Typography>
       </Alert>
       <Typography
