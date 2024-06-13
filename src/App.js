@@ -71,7 +71,7 @@ const releases = {
 const releaseColors = [
   "default",
   "default", // "secondary",
-  "success",
+  "default", // "success",
   "primary",
   "warning",
   "info",
@@ -99,7 +99,7 @@ const releaseDates = {
 };
 
 const App = () => {
-  const [selectedRelease, setSelectedRelease] = useState("release2");
+  const [selectedRelease, setSelectedRelease] = useState("release3");
   const [featureList, setFeatureList] = useState({});
   const [openDialog, setOpenDialog] = useState(false);
   const [dialogContent, setDialogContent] = useState({});
@@ -107,7 +107,7 @@ const App = () => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    loadFeatures("release2");
+    loadFeatures("release3");
   }, []);
 
   useEffect(() => {
@@ -293,7 +293,8 @@ const App = () => {
         Scheduler v3 Interactive Roadmap
       </Typography>
       <Alert severity="warning" style={{ width: "50%" }}>
-        Scheduler v3 is under active development, and this roadmap is subject to change. <br />
+        Scheduler v3 is under active development, and this roadmap is subject to
+        change. <br />
         Last updated:{" "}
         <Typography component="span" color="primary">
           May 21, 2024
@@ -305,28 +306,32 @@ const App = () => {
         variant="body1"
         paddingTop={"20px"}
       >
-        If you're a current Nylas v2 Scheduler user, this page helps you understand 
-        when v3 Scheduler will have the features you need to complete migration. <br />
+        If you're a current Nylas v2 Scheduler user, this page helps you
+        understand when v3 Scheduler will have the features you need to complete
+        migration. <br />
         <br />
-        Select all the features your implementation uses to see a projected date when
-        Scheduler v3 will include all of your selections. Greyed out items are already available.<br />
+        Select all the features your implementation uses to see a projected date
+        when Scheduler v3 will include all of your selections. Greyed out items
+        are already available.
         <br />
-        You can also click a release at the top of the page to see which features will be available 
-        by that release. Scheduler v3 will get closer to full feature parity as we build throughout the spring and summer. <br />
         <br />
-        Keep in mind that Scheduler v3 might already have everything your project needs. 
-        If it doesn't you can still{" "}
+        You can also click a release at the top of the page to see which
+        features will be available by that release. Scheduler v3 will get closer
+        to full feature parity as we build throughout the spring and summer.{" "}
+        <br />
+        <br />
+        Keep in mind that Scheduler v3 might already have everything your
+        project needs. If it doesn't you can still{" "}
         <Typography fontStyle={"italic"} display="inline">
           start
         </Typography>{" "}
-        migration at any time before the full parity date. This tool is to confirm the date
-        when{" "}
+        migration at any time before the full parity date. This tool is to
+        confirm the date when{" "}
         <Typography fontStyle={"italic"} display="inline">
           all
         </Typography>{" "}
         of the features you need will be available.
         <br />
-        
       </Typography>
       {/* this will be for info etc.*/}
       {Object.entries(featureList)
