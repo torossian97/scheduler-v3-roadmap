@@ -72,7 +72,7 @@ const releaseColors = [
   "default",
   "default", // "secondary",
   "default", // "success",
-  "primary",
+  "default", // "primary",
   "warning",
   "info",
   "error",
@@ -99,15 +99,15 @@ const releaseDates = {
 };
 
 const App = () => {
-  const [selectedRelease, setSelectedRelease] = useState("release3");
+  const [selectedRelease, setSelectedRelease] = useState("release4");
   const [featureList, setFeatureList] = useState({});
   const [openDialog, setOpenDialog] = useState(false);
   const [dialogContent, setDialogContent] = useState({});
-  const [earliestMigrationRelease, setEarliestMigrationRelease] = useState(1);
+  const [earliestMigrationRelease, setEarliestMigrationRelease] = useState(4);
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    loadFeatures("release3");
+    loadFeatures("release4");
   }, []);
 
   useEffect(() => {
@@ -297,7 +297,7 @@ const App = () => {
         change. <br />
         Last updated:{" "}
         <Typography component="span" color="primary">
-          June 13, 2024
+          June 20, 2024
         </Typography>
       </Alert>
       <Typography
