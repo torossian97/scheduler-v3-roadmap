@@ -57,6 +57,7 @@
     },
     "locale": true,
     "locale_for_guests": true,
+    "migration": true,
     "reminders": {
       "email": true,
       "webhooks": true

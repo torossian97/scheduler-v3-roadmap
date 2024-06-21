@@ -297,7 +297,7 @@ const App = () => {
         change. <br />
         Last updated:{" "}
         <Typography component="span" color="primary">
-          June 20, 2024
+          June 21, 2024
         </Typography>
       </Alert>
       <Typography

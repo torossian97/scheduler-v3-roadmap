@@ -57,6 +57,7 @@
     },
     "locale": false,
     "locale_for_guests": false,
+    "migration": false,
     "reminders": {
       "email": false,
       "webhooks": false

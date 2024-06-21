@@ -183,6 +183,10 @@
     "name": "Locale for Guests",
     "description": ""
   },
+  "migration": {
+    "name": "Migration tooling for v2 customers 🏗️",
+    "description": "When a scheduling page is loaded in v3 with a slug, a page-fetching attempt is made for the given app_id in v3. If the slug doesn't exist in v3, v2 is checked, and the page is migrated automatically if it exists. From that point on, it is a v3 page. Note that some pages may fail to migrate due to complexities. They will then have to be re-created by end-users."
+  },
   "reminders.email": {
     "name": "Email Reminders",
     "description": ""
