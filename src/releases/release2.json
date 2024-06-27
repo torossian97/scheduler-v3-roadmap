@@ -46,6 +46,12 @@
       "template_title": true,
       "participants": true
     },
+    "webhooks": {
+      "bookings_created": false,
+      "bookings_rescheduled": false,
+      "bookings_cancelled": false,
+      "bookings_pending": false
+    },
     "expire_after": {
       "date": false,
       "uses": false

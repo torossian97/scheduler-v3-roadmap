@@ -11,6 +11,10 @@
     "name": "Event Options",
     "description": "Event settings, all available via API, with UI parity support via the Editor Component."
   },
+  "webhooks": {
+    "name": "Webhooks 🆕",
+    "description": "Scheduler-specific webhooks for bookings."
+  },
   "expire_after": {
     "name": "Expiry Support",
     "description": "The ability to make scheduling configurations (pages) that expire after your defined criteria."

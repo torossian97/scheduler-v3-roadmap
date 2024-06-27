@@ -151,13 +151,29 @@
     "name": "Event Participants",
     "description": ""
   },
+  "webhooks.bookings_created": {
+    "name": "Created Bookings",
+    "description": ""
+  },
+  "webhooks.bookings_rescheduled": {
+    "name": "Rescheduled Bookings",
+    "description": ""
+  },
+  "webhooks.bookings_cancelled": {
+    "name": "Cancelled Bookings",
+    "description": ""
+  },
+  "webhooks.bookings_pending": {
+    "name": "Pending Bookings",
+    "description": "Pendings bookings are bookings which either need manual confirmation from the organizer, or that need custom confirmation from any other business logic through the PUT /bookings endpoint."
+  },
   "expire_after.date": {
     "name": "Expire at Date",
-    "description": ""
+    "description": "Can be done with web components now, as they can be gated any way a developer wishes. Pages can also be deleted through our CRUD endpoints. Scheduler webhooks (new to V3) can help these flows."
   },
   "expire_after.uses": {
     "name": "Expire After Uses",
-    "description": ""
+    "description": "Can be done with web components now, as they can be gated any way a developer wishes. Pages can also be deleted through our CRUD endpoints. Scheduler webhooks (new to V3) can help these flows."
   },
   "disable_emails": {
     "name": "Disable Emails",

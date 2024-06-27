@@ -180,6 +180,7 @@ const App = () => {
       "appearance",
       "booking",
       "event",
+      "webhooks",
       "expire_after",
       "features",
       "reminders",
@@ -297,7 +298,7 @@ const App = () => {
         change. <br />
         Last updated:{" "}
         <Typography component="span" color="primary">
-          June 21, 2024
+          June 27, 2024
         </Typography>
       </Alert>
       <Typography
