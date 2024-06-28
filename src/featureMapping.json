@@ -68,11 +68,7 @@
     "description": "This is the cancellation message/policy that organizers can configure from the Editor. It shows up on cancellation flows to end-users."
   },
   "booking.confirmation_emails_to_guests": {
-    "name": "Toggle Sending Confirmation Emails to Guests",
-    "description": ""
-  },
-  "booking.confirmation_emails_to_host": {
-    "name": "Toggle Sending Confirmation Emails to Host",
+    "name": "Customize Email Body / Title",
     "description": ""
   },
   "booking.confirmation_method.automatic": {

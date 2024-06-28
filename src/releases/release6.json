@@ -19,7 +19,6 @@
       "calendar_invite_to_guests": true,
       "cancellation_policy": true,
       "confirmation_emails_to_guests": true,
-      "confirmation_emails_to_host": true,
       "confirmation_method": {
         "automatic": true,
         "manual": true,
@@ -29,7 +28,7 @@
       "min_booking_notice": true,
       "min_cancellation_notice": true,
       "min_buffer": true,
-      "name_field_hidden": true,
+      "name_field_hidden": false,
       "conferencing": true,
       "slot_logic": true,
       "hide_flows": true,
