@@ -21,7 +21,7 @@
       "confirmation_emails_to_guests": true,
       "confirmation_method": {
         "automatic": true,
-        "manual": true,
+        "manual": false,
         "external": true
       },
       "interval_minutes": true,
