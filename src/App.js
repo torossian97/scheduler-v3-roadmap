@@ -73,7 +73,7 @@ const releaseColors = [
   "default", // "secondary",
   "default", // "success",
   "default", // "primary",
-  "warning",
+  "default", // warning
   "info",
   "error",
 ];
@@ -84,7 +84,7 @@ const releaseAliases = {
   release3: "Late May",
   release4: "Mid June",
   release5: "Late June",
-  release6: "July 30 (GA)",
+  release6: "July 23 (GA)",
   release7: "Post-GA",
 };
 
@@ -94,20 +94,20 @@ const releaseDates = {
   release3: "late May, 2024",
   release4: "mid June, 2024",
   release5: "late June, 2024",
-  release6: "July 30, 2024",
+  release6: "July 23, 2024",
   release7: "> August, 2024",
 };
 
 const App = () => {
-  const [selectedRelease, setSelectedRelease] = useState("release4");
+  const [selectedRelease, setSelectedRelease] = useState("release5");
   const [featureList, setFeatureList] = useState({});
   const [openDialog, setOpenDialog] = useState(false);
   const [dialogContent, setDialogContent] = useState({});
-  const [earliestMigrationRelease, setEarliestMigrationRelease] = useState(4);
+  const [earliestMigrationRelease, setEarliestMigrationRelease] = useState(5);
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    loadFeatures("release4");
+    loadFeatures("release5");
   }, []);
 
   useEffect(() => {
@@ -298,7 +298,7 @@ const App = () => {
         change. <br />
         Last updated:{" "}
         <Typography component="span" color="primary">
-          July 9, 2024
+          July 10, 2024
         </Typography>
       </Alert>
       <Typography
