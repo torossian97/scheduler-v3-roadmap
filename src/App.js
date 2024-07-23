@@ -74,7 +74,7 @@ const releaseColors = [
   "default", // "success",
   "default", // "primary",
   "default", // warning
-  "info",
+  "default", // "info",
   "error",
 ];
 
@@ -99,7 +99,7 @@ const releaseDates = {
 };
 
 const App = () => {
-  const [selectedRelease, setSelectedRelease] = useState("release5");
+  const [selectedRelease, setSelectedRelease] = useState("release6");
   const [featureList, setFeatureList] = useState({});
   const [openDialog, setOpenDialog] = useState(false);
   const [dialogContent, setDialogContent] = useState({});
@@ -107,7 +107,7 @@ const App = () => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    loadFeatures("release5");
+    loadFeatures("release6");
   }, []);
 
   useEffect(() => {
@@ -298,7 +298,7 @@ const App = () => {
         change. <br />
         Last updated:{" "}
         <Typography component="span" color="primary">
-          July 10, 2024
+          July 22, 2024
         </Typography>
       </Alert>
       <Typography

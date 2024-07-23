@@ -28,7 +28,6 @@
       "min_booking_notice": true,
       "min_cancellation_notice": true,
       "min_buffer": true,
-      "name_field_hidden": false,
       "conferencing": true,
       "slot_logic": true,
       "hide_flows": true,
