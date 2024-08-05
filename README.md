@@ -1,70 +1,41 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## TL;DR
 
-## Available Scripts
+A single-page roadmap that served as a single source of truth for what would be shipped, and when. For external and internal stakeholders, with interactive options.
 
-In the project directory, you can run:
+Saved hours of comms via emails, messages etc.
 
-### `npm start`
+[Demo here](https://scheduler-v3-roadmap.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## The Problem
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Being the Product Manager for Scheduler, and with Nylas annoucing EOL for Scheduler v2, there were a lot of questions and apprehension around when Scheduler v3 would be ready.
 
-### `npm test`
+Scheduler v3 was a 2-quarter initiative, and we wanted to make sure we shipped incrementally to beta to avoid waterfalling everything in the general release.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+With all of this in mind, there was A LOT of noise hitting me from customers, customer success, sales, and leadership.
 
-### `npm run build`
+"When will X feature be shipped?", "What will be different in v3?", etc.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Jira roadmaps weren't publicly available for customers, and proved far too overwhelming for internal teams that already had 101 things to keep track of.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## The Solution
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A single-page roadmap, hosted on it's own public domain, that served as a single source of truth for what would be shipped, and when.
 
-### `npm run eject`
+Customers could select the features they were using in v2, and see when the projected date was when their particular use-case would have parity with v3.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This was updated every time we shipped, and became used relogiously by every stakeholder.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## The Outcome
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Hours of time a week was saved communicating what would be shipped, when. There were hundreds of CSMs, sales people, leaders and customers who all needed to know these answers.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The noise went from 100 to 0 overnight once this was launched.
 
-## Learn More
+## Running it
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- pull it
+- `npm install`
+- `npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
